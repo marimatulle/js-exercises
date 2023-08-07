@@ -83,3 +83,5 @@ logs.forEach((product) => {
 });
 
 console.log(sales);
+
+exports.sales = sales;
