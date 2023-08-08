@@ -1,9 +1,11 @@
-const allSales = require('./parseLogs')
+const logs = require('./logs')
+const parseLogs = require('./parseLogs')
 
 describe('parseLogs', () => {
     test('should return an array with the transaction id, product name and total sales', () => {
-        expect(allSales).toEqual(
-            { sales : [
+        const result = parseLogs(logs)
+        expect(result).toEqual(
+            [
                 {
                 id: '001',
                 products: [
@@ -58,7 +60,7 @@ describe('parseLogs', () => {
                     { name: 'chocolat', total: 7500 }
                 ],
             },
-            ]}
+            ]
         )
     })
 })
