@@ -24,7 +24,7 @@ const createNewSale = (transaction, product) => {
   };
 };
 
-const parseLog = (logs) => {
+const parseSales = (logs) => {
   const sales = [];
 
   logs.forEach((product) => {
@@ -46,4 +46,4 @@ const parseLog = (logs) => {
   return sales;
 };
 
-module.exports = parseLog;
+module.exports = parseSales;
